@@ -294,17 +294,18 @@ const cartas = [
 
 function exibirdados() {
     console.clear();
-    console.log("// Mostra todas as cartas");
+    console.log("// Mostra todas as cartas em JSON");
+    console.log(cartas);
 
     cartas.forEach(carta => {
-        console.log('Nome:', carta.nome);
-        console.log('Cor:', carta.cor);
-        console.log('Tipo:', carta.tipo);
-        console.log('Quantidade:', carta.quantidade || 'N/A');
-        console.log('Custo de Mana:', carta.custoDeMana || 'N/A');
-        console.log('Poder/Resistência:', carta['Poder/Resistência:'] || 'N/A');
-        console.log('Habilidades:', carta.habilidades.join(', '));
-        console.log('Imagem:', carta.imagem);
+        console.log(`Nome: ${carta.nome}`);
+        console.log(`Cor: ${carta.cor}`);
+        console.log(`Tipo: ${carta.tipo}`);
+        console.log(`Quantidade: ${carta.quantidade}`);
+        console.log(`Custo de Mana: ${carta.custoDeMana}`);
+        console.log(`Poder/Resistência: ${carta['Poder/Resistência:']}`);
+        console.log(`Habilidades: ${carta.habilidades.join(', ')}`);
+        console.log(`Imagem: ${carta.imagem}`);
         console.log('---');
     });
 }
